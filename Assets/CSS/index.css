@@ -1,0 +1,156 @@
+/* Exercice 1 */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-auto-rows: 50px;
+}
+
+.block-one {
+    background-color: darkred;
+}
+
+.block-two {
+    background-color: turquoise;
+}
+
+.block-three {
+    background-color: lightgreen;
+}
+
+.block-four {
+    background-color: purple;
+}
+
+.block-five {
+    background-color: orange;
+}
+
+.block-six {
+    background-color: darkcyan;
+}
+
+.block-seven {
+    background-color: red;
+}
+
+.block-eight {
+    background-color: greenyellow;
+}
+
+.block-nine {
+    background-color: darkblue;
+}
+
+p {
+    color: white;
+    padding-left: 20%;
+}
+
+/* Exercice 2 */
+
+.block-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px 50px 80px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.one {
+    background-color: darkred;
+}
+
+.two {
+    background-color: turquoise;
+}
+
+.three {
+    background-color: lightgreen;
+}
+
+.four {
+    background-color: purple;
+}
+
+.five {
+    background-color: orange;
+}
+
+.six {
+    background-color: darkcyan;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.seven {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.eight {
+    background-color: greenyellow;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.nine {
+    background-color: darkblue;
+    grid-column: 4;
+    grid-row: 3;
+}
+
+/* Exercice 3 */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,50px);
+    gap: 1px;
+    text-align: center;
+    grid-template-areas:
+    "header header header header header header header"
+    "menu menu main main main right right" 
+    "menu menu footer footer footer footer footer";
+}
+
+.B1 {
+    background-color: salmon;
+    grid-area: header;
+}
+
+.B2 {
+    background-color: salmon;
+    grid-area: menu;
+}
+
+.B3 {
+    background-color: salmon;
+    grid-area: main;
+}
+
+.B4 {
+    background-color: salmon;
+    grid-area: right;
+}
+
+.B5 {
+    background-color: salmon;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 640px) {
+  .grid-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "right"
+    "footer";
+  }  
+}
